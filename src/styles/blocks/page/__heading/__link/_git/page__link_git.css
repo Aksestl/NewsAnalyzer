@@ -1,0 +1,9 @@
+.page__link.page__link_git{
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .page__link.page__link_git {
+        display: none;
+    }
+}

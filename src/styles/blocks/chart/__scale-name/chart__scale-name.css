@@ -1,0 +1,11 @@
+@import url(./__point/chart__point.css);
+
+.chart__scale-name{
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}

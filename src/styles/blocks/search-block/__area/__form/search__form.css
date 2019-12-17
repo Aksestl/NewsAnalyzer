@@ -1,0 +1,11 @@
+@import url(../../../button/__search/button__search.css);
+@import url(./__input/search__input.css);
+
+.search__form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+};

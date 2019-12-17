@@ -1,0 +1,17 @@
+@import url(./__title/info__title.css);
+@import url(./__article/info__article.css);
+
+.info__about{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-start;
+
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .info__about {
+        width: 90%;
+    }
+}

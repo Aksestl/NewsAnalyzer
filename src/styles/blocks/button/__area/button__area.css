@@ -1,0 +1,23 @@
+@import url(./_git/button__area_git.css);
+.button__area{
+    margin-top: 64px;
+    padding-bottom: 80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+@media (max-width: 800px) {
+    .button__area {
+        margin-top: 22px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 370px) {
+    .button__area {
+        margin-top: 12px;
+        padding-bottom: 44px;
+    }
+}

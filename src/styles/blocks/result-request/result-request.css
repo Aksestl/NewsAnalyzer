@@ -1,0 +1,12 @@
+@import url(./news-list/news-list.css);
+
+.result-request{
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .result-request {
+        width: 90%;
+    }
+}

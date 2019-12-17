@@ -1,0 +1,24 @@
+@import url(./__item/technology__item.css);
+
+.technology__container{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 104px;
+}
+
+@media (max-width: 950px) {
+    .technology__container {
+        width: 90%;
+        margin: 0 40px 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .technology__container {
+        width: 90%;
+        margin: 0 20px 20px;
+    }
+}

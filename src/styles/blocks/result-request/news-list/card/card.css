@@ -1,0 +1,8 @@
+@import url(./__image/card__image.css);
+@import url(./__description/card__description.css);
+
+.card{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+}

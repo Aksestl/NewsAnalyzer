@@ -1,0 +1,10 @@
+@import url(./__email/flickity__email.css);
+@import url(./__name/flickity__name.css);
+
+.flickity__about{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 15px;
+    
+}

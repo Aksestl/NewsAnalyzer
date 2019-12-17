@@ -1,0 +1,10 @@
+.page__title.page__title_about{
+    width: 40%;
+    margin-left: 104px;
+}
+
+@media (max-width: 950px) {
+    .page__title.page__title_about {
+       margin-left: 40px;
+    }
+}

@@ -1,0 +1,22 @@
+.result-request__button-area{
+    margin-top: 64px;
+    padding-bottom: 80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .result-request__button-area {
+        margin-top: 22px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 370px) {
+    .result-request__button-area {
+        margin-top: 12px;
+        padding-bottom: 44px;
+    }
+}

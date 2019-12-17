@@ -1,0 +1,7 @@
+.header__menu-item.header__menu-item_black{
+    color: #B6BCBF;
+}
+
+.header__menu-item.header__menu-item_black:hover{
+    color: black;
+}

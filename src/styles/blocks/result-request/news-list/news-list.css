@@ -1,0 +1,33 @@
+@import url(./card/card.css);
+
+.news-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-gap: 16px 16px;
+    justify-content: center;   
+}
+
+@media (max-width: 800px) {
+    .news-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 8px 8px;
+    }
+}
+
+@media (max-width: 680px) {
+    .news-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8px 8px;
+    }
+}
+
+@media (max-width: 490px) {
+    .news-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 8px 8px;
+    }
+}
+
+

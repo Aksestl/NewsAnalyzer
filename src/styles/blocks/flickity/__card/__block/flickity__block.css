@@ -1,0 +1,10 @@
+@import url(./__avatar/flickity__avatar.css);
+@import Url(./__about/flickity__about.css);
+
+
+
+.flickity__block{
+    width: 80%;
+    margin: 24px auto 0;
+    display: flex;
+    align-items: center;}

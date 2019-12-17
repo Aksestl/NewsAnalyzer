@@ -1,0 +1,19 @@
+@import url(./__block/flickity__block.css);
+@import url(./__data/flickity__data.css);
+@import url(./__info/flickity__info.css);
+
+.flickity__card{
+    width: 400px;
+    margin: 50px 10px;
+
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    
+}
+
+@media (max-width: 500px) {
+    .flickity__card {
+        width: 300px;
+        margin: 20 10px;
+    }
+}

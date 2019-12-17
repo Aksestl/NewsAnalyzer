@@ -1,0 +1,18 @@
+@import url(./__item/chart__item.css);
+
+.chart__block{
+    width: 92%;
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    .chart__block {
+        width: 87%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .chart__block {
+        width: 85%;
+    }
+}

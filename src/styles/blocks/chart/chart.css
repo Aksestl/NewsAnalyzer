@@ -1,0 +1,19 @@
+@import url(./__title/chart__title.css);
+@import url(./__container/chart__container.css);
+@import url(./__scale-name/chart__scale-name.css);
+
+.chart{
+    background-color: #F5F6F7;
+    list-style: none;
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media (max-width: 500px) {
+    .chart {
+        margin-top: 25px;
+    }
+}

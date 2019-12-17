@@ -1,0 +1,28 @@
+@import url(./_black/header__title_black.css);
+.header__title{
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 104px;
+}
+
+@media (max-width: 768px) {
+    .header__title {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 470px) {
+    .header__title {
+        padding-left: 10px;
+        font-size: 16px;
+    }
+}
+
