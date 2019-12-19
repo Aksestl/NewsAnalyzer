@@ -10,7 +10,6 @@
     * CSS
     * JS
     * API
-    * Node.js
     * Webpack
     * Hot reloading
     * GIT 
