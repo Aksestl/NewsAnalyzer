@@ -1,0 +1,16 @@
+.null-request__message{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #B6BCBF;
+
+    width: 25%;
+}
+
+@media (max-width: 768px) {
+    .null-request__message {
+        width: 50%;
+    }
+}

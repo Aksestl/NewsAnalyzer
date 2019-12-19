@@ -1,0 +1,22 @@
+@import url(../button/__git/button__git.css);
+@import url(../button/__area/button__area.css);
+.commit-history{
+    background-color: #F5F6F7;
+
+    margin-top: 70px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    box-shadow: 70px 50px 50px 0px rgb(255, 255, 255, 0.8) inset, -70px 50px 50px 0px rgb(255, 255, 255, 0.8) inset;
+}
+
+
+@media (max-width: 500px) {
+    .commit-history {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        box-shadow: none;
+    }
+}

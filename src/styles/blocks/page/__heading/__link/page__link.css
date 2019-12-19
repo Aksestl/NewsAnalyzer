@@ -1,0 +1,21 @@
+@import url(./_git/page__link_git.css);
+.page__link{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .page__link {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,10 @@
+@import url(./__title/page__title.css);
+@import url(./__link/page__link.css);
+@import url(./_about/page__heading_about.css);
+
+.page__heading{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}

@@ -1,0 +1,30 @@
+@import url(../../fonts/fonts.css);
+@import url(../../vendor/normalize.css);
+@import url(../button/button.css);
+@import url(../search-block/search-block.css);
+@import url(../header/header.css);
+@import url(../pointer/pointer.css);
+@import url(../null-request/null-request.css);
+@import url(../search-bg/search-bg.css);
+@import url(../preloader/preloader.css);
+@import url(../result-request/result-request.css);
+@import url(../button/__show-news/button__show-news.css);
+@import url(../info/info.css);
+@import url(../footer/footer.css);
+@import url(../technology/technology.css);
+@import url(../chart/chart.css);
+@import url(../commit-history/commit-history.css);
+@import url(../../../../node_modules/flickity/css/flickity.css);
+@import url(../flickity/flickity.css);
+@import url(./__heading/page__heading.css);
+@import url(./__statistics/page__statistics.css);
+
+
+.page{
+  max-width: 1440px;
+  margin: 0 auto;
+  
+  background: white;
+}
+
+

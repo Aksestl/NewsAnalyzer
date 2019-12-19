@@ -1,0 +1,29 @@
+.footer__link-item{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #1A1B22;
+    text-decoration: none;
+
+    padding: 40px;
+}
+
+@media (max-width: 1200px) {
+    .footer__link-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer__link-item {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 680px) {
+    .footer__link-item {
+        text-align: start;
+    }
+}

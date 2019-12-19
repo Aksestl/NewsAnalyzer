@@ -1,0 +1,31 @@
+@import url(./__data/card__data.css);
+@import url(./__source/card__source.css);
+@import url(./__text/card__text.css);
+@import url(./__title/card__title.css);
+
+.card__description{
+    border-radius: 0 0 10px 10px;
+    
+    height: 304px;
+    margin-top: 24px;
+    margin-left: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+   
+}
+
+@media (max-width: 800px) {
+    .card__description {
+        height: 270px;
+    }
+}
+
+@media (max-width: 610px) {
+    .card__description {
+        height: 250px;
+    }
+}

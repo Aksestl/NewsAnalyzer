@@ -1,0 +1,12 @@
+.button__area.button__area_git{
+    display: none;
+}
+
+@media (max-width: 370px) {
+    .button__area.button__area_git {
+        display: flex;
+        margin-top: 12px;
+        padding-bottom: 15px;
+
+    }
+}

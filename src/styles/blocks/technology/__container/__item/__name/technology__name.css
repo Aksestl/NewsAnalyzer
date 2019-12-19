@@ -1,0 +1,12 @@
+.technology__name{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #1A1B22;
+
+    justify-items: flex-start;
+    align-items: flex-start;
+}

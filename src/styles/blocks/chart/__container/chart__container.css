@@ -1,0 +1,14 @@
+@import url(./__scale/chart__scale.css);
+@import url(./__block/chart__block.css);
+
+.chart__container{
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 3px solid #B6BCBF;
+
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}

@@ -1,0 +1,47 @@
+@import url(./__card/flickity__card.css);
+
+.flickity{
+    margin-bottom: 70px;
+}
+
+@media (max-width: 600px) {
+    .flickity {
+        margin-bottom: 10px;
+    }
+}
+
+.flickity-button{
+    background-color: #1A1B22;
+}
+
+.flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+.flickity-prev-next-button:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+.flickity-button-icon {
+    color: white;
+}
+
+@media (max-width: 475px) {
+    .flickity-prev-next-button {
+        display: none;
+    }
+}
+
+@media (max-width: 475px) {
+    .flickity-page-dots {
+        margin: 20px 0;
+    }
+}

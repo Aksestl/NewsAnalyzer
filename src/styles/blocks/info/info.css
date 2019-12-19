@@ -1,0 +1,23 @@
+@import url(./__img/info__img.css);
+@import url(./__about/info__about.css);
+@import url(./_project/info_project.css);
+@import url(./_author/info_author.css);
+
+.info{
+    width: 85%;
+    margin: 80px auto;
+}
+
+@media (max-width: 1200px) {
+    .info {
+        width: 90%;
+        margin: 80px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .info {
+        flex-wrap: wrap;
+        margin: 24px auto;
+    }
+}
