@@ -21,7 +21,7 @@
     background: #2A65CC;
 }
 
-.button__search:focus-within .search__form{
+.button__search:hover{
     background: #347EFF; 
 }
 
@@ -30,6 +30,6 @@
     .button__search {
         width: 100%;
         display: block;
-        margin: 90px auto;
+        margin: 100px auto;
     }
 }

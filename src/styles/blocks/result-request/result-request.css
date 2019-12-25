@@ -1,8 +1,10 @@
 @import url(./news-list/news-list.css);
+@import url(./_closed/result-request_closed.css);
 
 .result-request{
     width: 85%;
     margin: 0 auto;
+    padding-top: 40px;
 }
 
 @media (max-width: 800px) {
