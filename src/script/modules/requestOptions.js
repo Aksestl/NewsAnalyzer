@@ -1,6 +1,22 @@
-function preloaderLoading(isLoading) {
-  const preloader = document.querySelector('.preloader');
+import {cardContainer} from "../constants.js";
 
+const nullRequest = document.querySelector('.null-request');
+const resultHeadings = document.querySelector('.result-request');
+const preloader = document.querySelector('.preloader');
+
+function removeResults() {
+  //cards
+  while (cardContainer.firstChild) {
+    cardContainer.removeChild(cardContainer.firstChild);
+  }
+  //other results
+  nullRequest.classList.remove('null-request_is-opened');
+  resultHeadings.classList.add('result-request_closed');
+}
+
+
+function preloaderLoading(isLoading) {
+  
   if (isLoading) {
     preloader.classList.add('preloader_is-opened');
   } else {
@@ -8,13 +24,11 @@ function preloaderLoading(isLoading) {
   }
 }
   
-function nullRequest() {
-  const nullRequest = document.querySelector('.null-request');
+function nullResult() {
   nullRequest.classList.add('null-request_is-opened');
 }
   
-function resultHeadings() {
-  const resultHeadings = document.querySelector('.result-request');
+function showHeadings() {
   resultHeadings.classList.remove('result-request_closed');
 };
 
@@ -46,5 +60,5 @@ function dateFormater(data) {
   return(dateToReturn);
 }
 
-export {preloaderLoading, nullRequest, resultHeadings, dateFormater};
+export {preloaderLoading, nullResult, showHeadings, dateFormater, removeResults};
 

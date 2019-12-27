@@ -1,5 +1,6 @@
 @import url(./_about/page__title_about.css);
 @import url(./_stat/page__title_stat.css);
+@import url(./_capitalize/page__title_capitalize.css);
 .page__title {
     font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
     font-weight: normal;
