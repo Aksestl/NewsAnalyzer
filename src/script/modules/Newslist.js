@@ -1,8 +1,8 @@
-import {Card} from "./Card.js";
 
 class NewsList{
-    constructor(container, articles) {
+    constructor(container, articles, newItem) {
       this.container = container;
+      this.newItem = newItem;
       this.setCard = 3;
       this.addCards(articles, this.setCard);
 
@@ -12,7 +12,7 @@ class NewsList{
         
     addCards(articles, setCard) {
       for (let i = 0; i < setCard; i++) {      
-        const { element } = new Card(articles[i]);
+        const { element } = this.newItem(articles[i]);
         this.container.appendChild(element); 
       } 
     }

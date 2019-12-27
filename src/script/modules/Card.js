@@ -1,3 +1,4 @@
+import { dateFormater } from "./requestOptions.js";
 class Card {
     constructor(res) {
         this.source = res.source.name;
@@ -64,32 +65,6 @@ class Card {
     }  
 }
 
-function dateFormater(data) {
 
-    let monthStore = [];
-        monthStore[0] = "января";
-        monthStore[1] = "февраля";
-        monthStore[2] = "марта";
-        monthStore[3] = "апреля";
-        monthStore[4] = "мая";
-        monthStore[5] = "июня";
-        monthStore[6] = "июля";
-        monthStore[7] = "августа";
-        monthStore[8] = "сентября";
-        monthStore[9] = "октября";
-        monthStore[10] = "ноября";
-        monthStore[11] = "декабря";
-    
-
-    const date = data.slice(0, 10).split('-');
-    
-    const year = date[0];
-    const month = monthStore[date[1]-1]; 
-    const day = date[2];
-  
-    const dateToReturn = day + ' ' + month + ', ' + year;
-
-    return(dateToReturn);
-}
 
 export {Card};

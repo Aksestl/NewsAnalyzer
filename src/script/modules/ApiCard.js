@@ -1,11 +1,4 @@
-const url = 'https://newsapi.org/v2/everything?q=';
-const apiKey = 'af8a7a2cafc54df39dafa76f1bacc38a';
-
-const data = new Date();
-const toDATA = data.getFullYear() + '-' + (data.getMonth() + 1) + '-' + data.getDate();
-console.log(toDATA);
-const fromDATA = data.getFullYear() + '-' + (data.getMonth() + 1) + '-' + (data.getDate() - 7);
-console.log(fromDATA);
+import {url, toDATA, fromDATA, apiKey} from "../constants.js";
 
 class ApiCard {
     constructor(url, toDATA, fromDATA, apiKey) {

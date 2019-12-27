@@ -1,4 +1,5 @@
 import {ApiCard, url, toDATA, fromDATA, apiKey} from "./modules/ApiCard.js";
+import {Card} from "./modules/Card.js";
 import {NewsList} from "./modules/Newslist.js";
 import {preloaderLoading, nullRequest, resultHeadings} from "./modules/requestOptions.js";
 import {handleValidate} from "./modules/validation.js";
@@ -13,7 +14,8 @@ const cardContainer = document.querySelector('.news-list');
 const cardButton = document.getElementById('card-button');
 const searchForm = document.forms.form;
 const searchInput = searchForm.elements.news;
-const inputButton = document.querySelector('.button__search'); 
+const inputButton = document.querySelector('.button__search');
+const newCard = (...args) => new Card(...args);
 let newsList = [];
 
 
@@ -25,7 +27,7 @@ function newsSearchHandler(event) {
 
   apiCard.getCards(searchInput.value)
   .then(result => {
-      newsList = new NewsList(cardContainer, result.articles);
+      newsList = new NewsList(cardContainer, result.articles, newCard);
       cardsStorage(searchInput.value, result);
       console.log(cardsStorage);
     
