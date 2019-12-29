@@ -85,8 +85,7 @@ function makeBluePipes(data) {
     for(let i = 0; i < Object.values(data).length; i++) {
         if (Object.values(data)[i] != 0) {
         
-            const pipeWidth = (Object.values(data)[i] / resultData.totalResults) * 100;
-            console.log(pipeWidth);
+            const pipeWidth = Object.values(data)[i];
             pipe[i].style.width = `${pipeWidth}%`;
             pipe[i].textContent = Object.values(data)[i];
             pipe[i].style.background = '#2F71E5';

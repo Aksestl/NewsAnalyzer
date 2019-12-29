@@ -7,14 +7,12 @@ import {cardContainer, inputButton} from "./constants.js";
 import "../styles/index.css";
 
 
-
 // ПОИСК НОВОСТЕЙ И ДОБАВЛЕНИЕ КАРТОЧЕК НА СТРАНИЦУ
 const searchForm = document.forms.form;
 const searchInput = searchForm.elements.news;
-
 const apiCard = new ApiCard (url, toDATA, fromDATA, apiKey);
-console.log(apiCard);
 const newCard = (...args) => new Card(...args);
+checkRes();
 
 function newsSearchHandler(event) {
   event.preventDefault(); 
@@ -27,9 +25,6 @@ function newsSearchHandler(event) {
     console.log(result);
     saveResults(result, searchInput.value);
   })
-  .catch(error => {
-    console.log('Во время запроса произошла ошибка:'+ `${error}`);
-  })
 };
 
 function saveResults(data, keyWord) {
@@ -39,9 +34,8 @@ function saveResults(data, keyWord) {
   showResults();
 }
 
-function showResults() {
+function showResults() { 
   const cardsData = JSON.parse(localStorage.getItem('apiRes'));
-   
   if (cardsData.totalResults !== 0) {
     searchInput.value = localStorage.getItem('word');
     new NewsList(cardContainer, cardsData.articles, newCard);
@@ -54,7 +48,13 @@ function showResults() {
     } 
 }
 
-showResults();
+function checkRes() {
+  if (localStorage.length !== 1) {
+    showResults();
+  }
+} 
+
+
 document.forms.form.addEventListener('submit', newsSearchHandler);
 document.querySelector('.button__search').addEventListener("click", newsSearchHandler);
 searchInput.addEventListener('input', handleValidate);
