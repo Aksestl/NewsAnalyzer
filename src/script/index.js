@@ -54,7 +54,6 @@ function showResults() {
     } 
 }
 
-showResults();
 document.forms.form.addEventListener('submit', newsSearchHandler);
 document.querySelector('.button__search').addEventListener("click", newsSearchHandler);
 searchInput.addEventListener('input', handleValidate);
