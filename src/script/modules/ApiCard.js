@@ -7,7 +7,7 @@ class ApiCard {
         this.toDATA = toDATA;
         this.fromDATA = fromDATA;
     }
-  
+    
     // CARDS 
     getCards(keyWord) {
         return fetch(

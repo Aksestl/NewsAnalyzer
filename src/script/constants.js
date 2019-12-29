@@ -1,6 +1,6 @@
 // CARDS API
 const url = 'https://newsapi.org/v2/everything?q=';
-const apiKey = 'af8a7a2cafc54df39dafa76f1bacc38a';
+const apiKey = '9ef3db5805634a938277d66e4362684f';
 
 const data = new Date();
 const toDATA = data.getFullYear() + '-' + (data.getMonth() + 1) + '-' + data.getDate();
@@ -20,3 +20,4 @@ const inputButton = document.querySelector('.button__search');
 export {url, toDATA, fromDATA, apiKey};
 export {urlGH, owner, repo};
 export {cardContainer, inputButton};
+

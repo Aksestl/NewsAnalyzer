@@ -11,6 +11,7 @@ import "../styles/index.css";
 // ПОИСК НОВОСТЕЙ И ДОБАВЛЕНИЕ КАРТОЧЕК НА СТРАНИЦУ
 const searchForm = document.forms.form;
 const searchInput = searchForm.elements.news;
+
 const apiCard = new ApiCard (url, toDATA, fromDATA, apiKey);
 console.log(apiCard);
 const newCard = (...args) => new Card(...args);
@@ -23,12 +24,11 @@ function newsSearchHandler(event) {
 
   apiCard.getCards(searchInput.value)
   .then(result => {
+    console.log(result);
     saveResults(result, searchInput.value);
   })
   .catch(error => {
-    console.log('Во время запроса произошла ошибка:'+ `${error}` +
-    'Возможно, проблема с соединением или сервер недоступен.' + 
-    'Подождите немного и попробуйте ещё раз.');
+    console.log('Во время запроса произошла ошибка:'+ `${error}`);
   })
 };
 
@@ -58,6 +58,5 @@ showResults();
 document.forms.form.addEventListener('submit', newsSearchHandler);
 document.querySelector('.button__search').addEventListener("click", newsSearchHandler);
 searchInput.addEventListener('input', handleValidate);
-
 
 export {searchForm, inputButton};
