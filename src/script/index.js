@@ -49,7 +49,7 @@ function showResults() {
 }
 
 function checkRes() {
-  if (localStorage.length !== 1) {
+  if (localStorage.length !== 1 || localStorage.length !== 0 ) {
     showResults();
   }
 } 
