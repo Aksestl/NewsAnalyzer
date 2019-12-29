@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Cервис для анализа происходящих в мире событий">
+  <meta name="keywords" content="HTML5, CSS, native JS, JS modules, WebPack">
+  <meta name="author" content="Aksenova Alena">
+  <title>NewsAnalyzer</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/styles.e18e4a94d261c60272c1.css">
+
+</head>
+
+<body>
+  <div class="page">
+    <section class="search-block">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__title">NewsAnalyzer</div>
+        <div class="header__menu">
+          <a class="header__menu-item header__menu-item_selected pointer" href="./index.html">Главная</a>
+          <a class="header__menu-item pointer" href="./about.html">О проекте</a>
+        </div>
+      </header>
+
+      <!-- ПОИСК НОВОСТЕЙ -->
+      <div class="search__area">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, 
+        насколько популярной она была в новостях за прошедшую неделю.</h2>
+        <form class="search__form" name="form">
+          <input 
+          type="search" 
+          required 
+          minlength="2"
+          name="news" 
+          class="search__input" 
+          placeholder="Введите тему новости">
+          <button disabled type="submit" class="button__search pointer">Искать</button>
+        </form>
+        <p class="search__error search__error_hidden">Нужно ввести ключевое слово</p>
+
+      </div>
+    </section>
+
+    <!-- СТАТУС ЗАГРУЗКИ НОВОСТЕЙ -->
+    <div class="request-components">
+      
+      <!-- ПРЕЛОАДЕР КРУТИТСЯ -->
+      <section class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__status">Идет поиск новостей...</p>
+      </section>
+     
+      <!-- ЗАПРОС НЕ НАЙДЕН -->
+      <section class="null-request">
+        <img class="null-request__img" src="./images/not-found_v1.svg" alt="Sad magnifier">
+        <h2 class="null-request__status">Ничего не найдено</h2>
+        <p class="null-request__message">К сожалению по вашему запросу ничего не найдено.</p>
+      </section>
+ 
+    <!-- РЕЗУЛЬТАТ УСПЕШНОГО ЗАПРОСА -->
+      <section class="result-request result-request_closed">
+
+        <div class="page__heading" >
+          <h2 class="page__title">Результаты поиска</h2>
+          <a class="page__link" href="./statistics.html">Посмотреть аналитику &#62;</a>
+        </div>
+        
+        <div class="news-list"></div>  <!-- контейнер карточек -->
+
+        <div class="button__area">
+          <button class="button button__show-news pointer" id="card-button">Показать еще</button>
+        </div>
+
+      </section> 
+    </div> <!-- конец серого фона -->
+
+    <!-- ИНФОРМАЦИЯ ОБ АВТОРЕ -->
+    <section class="info info_author">
+      <picture>
+        <source srcset="./images/avatar-ipad.png" media="(max-width: 1200px)">
+        <source srcset="./images/avatar-se.png" media="(max-width: 475px)">
+        <img class="info__img" src="./images/avatar.png" alt="author's photo">
+      </picture>
+      <div class="info__about">
+        <h3 class="info__title">Об авторе</h3>
+        <article class="info__article">
+          <p class="info__paragraph">
+            Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
+            чем вы занимаетесь, какими технологиями разработки владеете.    
+          </p>
+          <p class="info__paragraph">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
+            и чем можете помочь потенциальным заказчикам.  
+          </p>          
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2019 Supersite</p>
+      <div class="footer__links">
+        <a class="footer__link-item pointer" href="./index.html">Главная</a>
+        <a class="footer__link-item pointer" href="./about.html">О проекте</a>
+        <a class="footer__link-item pointer" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+      </div>
+
+      <div class="footer__icons">
+        <a href="https://github.com/Aksestl">
+          <img class="footer__icon pointer" src="./images/github.svg" alt="Github">
+        </a>
+        <a href="https://facebook.com/">
+          <img class="footer__icon pointer" src="./images/facebook.svg" alt="Facebook">
+        </a>
+      </div>
+    </footer>  
+
+  </div>
+</body>
+
+<script type='module' src="./script/index.7868b14246d9c1c2aa9c.js"></script>
+</html>

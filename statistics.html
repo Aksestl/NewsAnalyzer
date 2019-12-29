@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Cервис для анализа происходящих в мире событий">
+  <meta name="keywords" content="HTML5, CSS, native JS, JS modules, WebPack">
+  <meta name="author" content="Aksenova Alena">
+  <title>Statistics</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/styles.e18e4a94d261c60272c1.css">
+
+</head>
+<body>
+    <div class="page">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__title header__title_black">NewsAnalyzer</div>
+        <div class="header__menu">
+          <a class="header__menu-item header__menu-item_black pointer" href="./index.html">Главная</a>
+          <a class="header__menu-item header__menu-item_black pointer" href="./about.html">О проекте</a>
+        </div>
+      </header>
+
+      <!-- ОБЩИЕ ДАННЫЕ ЗАПРОСА -->
+      <section class="page__statistics">
+        
+        <h2 class="page__title_stat">Главная 
+          <span class="page__title_stat page__title_stat_subtitle">/ Аналитика</span>
+        </h2>
+        
+        <h3 class="page__title">Вы спросили: «
+          <span class="page__title page__title_capitalize search-word"></span>
+          »
+        </h3>
+        <p class="page__title_stat">Новостей за неделю:
+          <span class="page__title_stat_bold total-result"> </span>
+        </p>
+        <p class="page__title_stat">Упоминаний в заголовках:
+          <span class=" page__title_stat_bold week-result"> </span>
+        </p>
+      </section>
+
+      <!-- ГРАФИК ЗАПРОСОВ -->
+      <section class="chart">
+        <h3 class="chart__title">Аналитика по дням</h3>       
+            
+        <div class="chart__scale-name">
+          <div class="chart__data">
+            <p class="chart__point chart__point_day">Дата</p>
+            <p class="chart__point chart__point_day">( <span class="current-month"> </span> )</p>
+          </div>
+          <p class="chart__point">Кол-во упоминаний</p>
+        </div>
+
+        <ul class="chart__container">
+
+          <li class="chart__scale">
+            <p class="chart__point">0</p>
+            <p class="chart__point">25</p>
+            <p class="chart__point">50</p>
+            <p class="chart__point">75</p>
+            <p class="chart__point">100</p>
+          </li>
+
+          <li class="chart__block">
+            <div class="chart__item"> 
+              <span class="chart__day"> </span>
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span> 
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span> 
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span>
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span>
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span>
+              <div class="chart__point chart__pipe"></div>
+            </div>
+            <div class="chart__item"> 
+              <span class="chart__day"> </span>
+              <div class="chart__point chart__pipe"></div>
+            </div>
+          </li>
+
+          <li class="chart__scale">
+            <p class="chart__point">0</p>
+            <p class="chart__point">25</p>
+            <p class="chart__point">50</p>
+            <p class="chart__point">75</p>
+            <p class="chart__point">100</p>
+          </li>
+          
+        </ul>
+
+      </section>
+  
+      
+  
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2019 Supersite</p>
+        <div class="footer__links">
+          <a class="footer__link-item pointer" href="./index.html">Главная</a>
+          <a class="footer__link-item pointer" href="./about.html">О проекте</a>
+          <a class="footer__link-item pointer" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+        </div>
+  
+        <div class="footer__icons">
+          <a href="https://github.com/Aksestl">
+            <img class="footer__icon pointer" src="./images/github.svg" alt="Github">
+          </a>
+          <a href="https://facebook.com/">
+            <img class="footer__icon pointer" src="./images/facebook.svg" alt="Facebook">
+          </a>
+        </div>
+      </footer>  
+  
+    </div>
+  </body>
+
+<script type='module' src="./script/statistics.fe6c59bc37ebb7c1a40f.js"></script>
+</html>

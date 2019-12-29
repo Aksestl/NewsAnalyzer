@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Cервис для анализа происходящих в мире событий">
+  <meta name="keywords" content="HTML5, CSS, native JS, JS modules, WebPack">
+  <meta name="author" content="Aksenova Alena">
+  <title>About</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/styles.e18e4a94d261c60272c1.css">
+  
+
+</head>
+<body>
+    <div class="page">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__title header__title_black">NewsAnalyzer</div>
+        <div class="header__menu">
+          <a class="header__menu-item header__menu-item_black pointer" href="./index.html">Главная</a>
+          <a class="header__menu-item header__menu-item_black header__menu-item_selected-black pointer" href="./about.html">О проекте</a>
+        </div>
+      </header>
+
+      <!-- ИНФОРМАЦИЯ О ПРОЕКТЕ -->
+      <section class="info info_project info__about">
+        <h3 class="info__title">Клиентам</h3>
+        <article class="info__article">
+          <p class="info__paragraph">
+            Этот сайт — дипломный проект студента Яндекс.Практикума. 
+            Его цель — показать, чему научился студент, какими технологиями владеет.  
+          </p>
+            <p class="info__paragraph">
+              Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. 
+              Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, 
+              выполненных по другим методологиям. Также сайт проще и дешевле поддерживать. 
+            </p>
+              <p class="info__paragraph">
+                Карточки с новостями приходят с сервера и обрабатываются асинхронно. 
+                То есть сайт продолжает работать, пока от сервера приходит ответ. 
+                Это повышает удобство использования сервиса. 
+              </p>
+                <p class="info__paragraph">
+                  При создании проекта была использована сборка технологией Webpack. 
+                  Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. 
+                  Также сайт работает в старых браузерах. 
+                  Даже если посетители — пользователи старых операционных систем, 
+                  у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает. 
+                </p>
+                  <p class="info__paragraph">
+                    Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, 
+                    мы рекомендуем обратиться к этому студенту. 
+                  </p>
+        </article>
+      </section>
+
+      <!-- БЛОК ИСПОЛЬЗОВАННЫХ ТЕХНОЛОГИЙ -->
+      <section class="technology">
+        <h3 class="page__title page__title_about">Используемые технологии</h3>
+        <div class="technology__container">
+
+          <div class="technology__item">
+            <p class="technology__name">HTML</p>
+            <img class="technology__image" src="./images/html.svg" alt="html logo">
+          </div>
+
+          <div class="technology__item">
+            <p class="technology__name">CSS</p>
+            <img class="technology__image" src="./images/css.svg" alt="css logo">
+          </div>
+
+            <div class="technology__item">
+              <p class="technology__name">JAVA SCRIPT</p>
+              <img class="technology__image" src="./images/js.svg" alt="js logo">
+            </div>
+
+              <div class="technology__item">
+                <p class="technology__name">WEBPACK</p>
+                <img class="technology__image" src="./images/webpack.svg" alt="webpack logo">
+              </div> 
+        </div>
+      </section>
+
+      <!-- ИНФОРМАЦИЯ ОБ АВТОРЕ -->
+      <section class="info info_author">
+      <picture>
+          <source srcset="./images/avatar-ipad.png" media="(max-width: 1200px)">
+          <source srcset="./images/avatar-se.png" media="(max-width: 475px)">
+          <img class="info__img" src="./images/avatar.png" alt="author's photo">
+        </picture>
+        <div class="info__about">
+          <h3 class="info__title">Об авторе</h3>
+          <article class="info__article">
+            <p class="info__paragraph">
+              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
+              чем вы занимаетесь, какими технологиями разработки владеете.    
+            </p>
+            <p class="info__paragraph">
+              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
+              и чем можете помочь потенциальным заказчикам.  
+            </p>          
+          </article>
+
+        </div>
+      </section>
+  
+      <!-- СЛАЙДЕР GIT КОММИТОВ -->
+      <section class="commit-history">
+        <div class="page__heading page__heading_about">
+          <h2 class="page__title">История коммитов из GitHub</h2>
+          <a class="page__link page__link_git" href="https://github.com/Aksestl/NewsAnalyzer">Открыть в Github &#62;</a>
+        </div>
+
+        <div class="flickity">
+        
+        <div class="button__area button__area_git">
+          <button class="button button__git pointer">Открыть в Github</button>
+        </div>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2019 Supersite</p>
+        <div class="footer__links">
+          <a class="footer__link-item pointer" href="./index.html">Главная</a>
+          <a class="footer__link-item pointer" href="./about.html">О проекте</a>
+          <a class="footer__link-item pointer" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+        </div>
+  
+        <div class="footer__icons">
+          <a href="https://github.com/Aksestl">
+            <img class="footer__icon pointer" src="./images/github.svg" alt="Github">
+          </a>
+          <a href="https://facebook.com/">
+            <img class="footer__icon pointer" src="./images/facebook.svg" alt="Facebook">
+          </a>
+        </div>
+      </footer>  
+  
+    </div>
+  </body>
+<script type='module' src="./script/about.38d56213d09830469c79.js"></script>
+</html>
