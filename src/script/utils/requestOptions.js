@@ -1,4 +1,4 @@
-import {cardContainer} from "../constants.js";
+import {cardContainer} from "./constants.js";
 
 const nullRequest = document.querySelector('.null-request');
 const resultHeadings = document.querySelector('.result-request');

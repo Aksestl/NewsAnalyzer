@@ -1,8 +1,8 @@
 class ApiGitHub {
     constructor(urlGH, owner, repo) {
-        this.baseUrl = `${urlGH}`;
-        this.owner = `${owner}`;
-        this.repo = `${repo}`;
+        this.baseUrl = urlGH;
+        this.owner = owner;
+        this.repo = repo;
     }
     // CARDS 
     getCommits() {
@@ -21,10 +21,6 @@ class ApiGitHub {
             .then((result) => { 
               console.log(result);
               return result;
-            })
-               
-            .catch(error => {
-                console.log(error);
             });
     }
 }

@@ -1,60 +1,60 @@
-import {dateFormater} from "./requestOptions.js";
+import {dateFormater} from "../../../../script/utils/requestOptions.js";
 class CardCommit {
     constructor(name, email, date, message, avatar) {
-        this.name = name;
-        this.email = email;
-        this.date = date;
-        this.message = message;
-        this.avatar = avatar;
+        this._name = name;
+        this._email = email;
+        this._date = date;
+        this._message = message;
+        this._avatar = avatar;
 
-        this.commitElement = this.createCard();
+        this.commitElement = this._createCard();
     }
 
-    createCard() {
+    _createCard() {
         const card = document.createElement('div');
         card.classList.add('flickity__card');     
 
-        card.appendChild(this.createDate());
-        card.appendChild(this.createBlock());
-        card.appendChild(this.createInfo());
+        card.appendChild(this._createDate());
+        card.appendChild(this._createBlock());
+        card.appendChild(this._createInfo());
         
         return card;
     }
 
-    createDate() {
+    _createDate() {
         const date = document.createElement('p');
         date.classList.add('flickity__data', 'card__data');
-        date.textContent = dateFormater(this.date);
+        date.textContent = dateFormater(this._date);
 
         return date;
     }
 
-    createBlock() {
+    _createBlock() {
         const block = document.createElement('div');
         block.classList.add('flickity__block');
         
         const image = document.createElement('img');
         image.classList.add('flickity__avatar');
         image.alt = 'Извините, данное изображение не доступно';
-        image.src =  this.avatar;
+        image.src =  this._avatar;
         
         block.appendChild(image);
-        block.appendChild(this.createAbout());
+        block.appendChild(this._createAbout());
 
         return block;
     }  
 
-    createAbout() {
+    _createAbout() {
         const about = document.createElement('div');
         about.classList.add('flickity__about');
         
         const name = document.createElement('h3');
         name.classList.add('flickity__name');
-        name.textContent = this.name;
+        name.textContent = this._name;
      
         const email = document.createElement('p');
         email.classList.add('flickity__email');
-        email.textContent = this.email;
+        email.textContent = this._email;
         
         about.appendChild(name);
         about.appendChild(email);
@@ -62,10 +62,10 @@ class CardCommit {
         return about;
     }  
 
-    createInfo() {
+    _createInfo() {
         const info = document.createElement('p');
         info.classList.add('flickity__info');
-        info.textContent = this.message;
+        info.textContent = this._message;
         
         return info;
     }

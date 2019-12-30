@@ -1,9 +1,9 @@
-import {ApiCard, url, toDATA, fromDATA, apiKey} from "./modules/ApiCard.js";
-import {Card} from "./modules/Card.js";
-import {NewsList} from "./modules/Newslist.js";
-import {preloaderLoading, nullResult, showHeadings, removeResults} from "./modules/requestOptions.js";
-import {handleValidate} from "./modules/validation.js";
-import {cardContainer, inputButton} from "./constants.js";
+import {ApiCard} from "./modules/ApiCard.js";
+import {Card} from "../styles/blocks/result-request/news-list/card/Card.js";
+import {NewsList} from "../styles/blocks/result-request/news-list/Newslist.js";
+import {preloaderLoading, nullResult, showHeadings, removeResults} from "./utils/requestOptions.js";
+import {handleValidate} from "./utils/validation.js";
+import {cardContainer, inputButton, url, toDATA, fromDATA, apiKey} from "./utils/constants.js";
 import "../styles/index.css";
 
 
@@ -12,47 +12,58 @@ const searchForm = document.forms.form;
 const searchInput = searchForm.elements.news;
 const apiCard = new ApiCard (url, toDATA, fromDATA, apiKey);
 const newCard = (...args) => new Card(...args);
-checkRes();
+
 
 function newsSearchHandler(event) {
   event.preventDefault(); 
   removeResults();
-  localStorage.clear();
   preloaderLoading(true);
+  searchInput.setAttribute('disabled', true);
 
   apiCard.getCards(searchInput.value)
   .then(result => {
-    console.log(result);
-    saveResults(result, searchInput.value);
+    checkResult(result.articles);
+    searchInput.removeAttribute('disabled');
+    
+    localStorage.clear();
+    const apiRes = JSON.stringify(result);
+    localStorage.setItem('apiRes', apiRes);
+    localStorage.setItem('word', searchInput.value);
+
   })
+  .catch(error => {
+    console.log(error);
+    return Promise.reject(`Ошибка: ${err.status}`);
+  })
+  .finally(() =>{
+    searchInput.removeAttribute('disabled');
+  });
 };
 
-function saveResults(data, keyWord) {
-  const apiResult = JSON.stringify(data);
-  localStorage.setItem('apiRes', apiResult);
-  localStorage.setItem('word', keyWord);
-  showResults();
-}
-
-function showResults() { 
+if (localStorage.getItem('apiRes') !== null) {
+  searchInput.value = localStorage.getItem('word');
   const cardsData = JSON.parse(localStorage.getItem('apiRes'));
-  if (cardsData.totalResults !== 0) {
-    searchInput.value = localStorage.getItem('word');
-    new NewsList(cardContainer, cardsData.articles, newCard);
+  checkResult(cardsData.articles);
+};
+
+
+function checkResult(data) {
+  if (data.length == 0) {
+    localStorage.clear();
     preloaderLoading(false);
-    showHeadings();
+    nullResult();
   } 
     else {
       preloaderLoading(false);
-      nullResult();
+      showHeadings(); 
+      showResults(data);       
     } 
+};
+
+function showResults(data) {
+  new NewsList(cardContainer, data, newCard)._renderCards();
 }
 
-function checkRes() {
-  if (localStorage.length !== 1) {
-    showResults();
-  }
-} 
 
 
 document.forms.form.addEventListener('submit', newsSearchHandler);

@@ -1,8 +1,6 @@
-import {url, toDATA, fromDATA, apiKey} from "../constants.js";
-
 class ApiCard {
     constructor(url, toDATA, fromDATA, apiKey) {
-        this.baseUrl = `${url}`;
+        this.baseUrl = url;
         this.apiKey = apiKey;
         this.toDATA = toDATA;
         this.fromDATA = fromDATA;
@@ -27,14 +25,8 @@ class ApiCard {
               console.log(result);
               return result;
             })
-               
-            .catch(error => {
-                console.log(error);
-            });
     }
-
- 
 }
 
 
-export {ApiCard, url, toDATA, fromDATA, apiKey};
+export {ApiCard};

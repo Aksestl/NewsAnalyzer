@@ -3,7 +3,7 @@ import "../styles/statistics.css";
 // получили данные
 const resultData = JSON.parse(localStorage.getItem('apiRes'));
 const keyWord = localStorage.getItem('word');
-console.log(resultData);
+const pipes = document.querySelectorAll('.chart__pipe');
 
 // подставили значения шапки
 const searchWord = document.querySelector(".search-word");
@@ -17,15 +17,15 @@ const weekResult = document.querySelector(".week-result");
 weekResult.textContent = weekQuantity;
 
 function countWeekResults(word) {
-    let titleCount = 0;
+    let titlesCount = 0;
     const articles = resultData.articles;
 
     for (let i = 0; i < articles.length; i++) {
         if (articles[i].title.toLowerCase().includes(word.toLowerCase())){
-           titleCount +=1;
+           titlesCount +=1;
         }
     }
-    return titleCount;
+    return titlesCount;
 }
 
 // проставляем текущий месяц на линии
@@ -37,8 +37,7 @@ const currentMonth = document.querySelector(".current-month");
 currentMonth.textContent = formatterMonth.format(date);
 
 // текущие даты и день недели в графике
-
-const chartDay = document.querySelectorAll('.chart__day');
+const chartDays = document.querySelectorAll('.chart__day');
 chartData();
 
 function chartData() {
@@ -55,45 +54,53 @@ function chartData() {
 
 function addChartData(array) {
     for (let i = 0; i < array.length; i++ ) {
-        chartDay[i].textContent = array[i];
+        chartDays[i].textContent = array[i];
     }
 }
-dayCount();
-// столбцы графика
-dayCount();
 
-function dayCount() {
-    const dayNews = {};
+// столбцы графика
+daysCount();
+
+function daysCount() {
+
+    const daysNews = {};
 
     resultData.articles.forEach(item => {
       const day = new Date(item.publishedAt.substring(0, 10)).getDate();
 
-      if (day in dayNews) {
-        dayNews[day]++;
-
-      } else {
-        dayNews[day] = 1;
+      if (day in daysNews) {
+        daysNews[day]++;
+      }
+        else {
+        daysNews[day] = 1;
         }
     });
+    
+    const data = new Date();
+    const daysList = data.getDate();
+    const currentWeek = new Map();
+    for (let i = 6; i >= 0; i--) {
+        currentWeek.set(daysList - i, 0);
+    }
+    const objCurrentWeek = Object.fromEntries(currentWeek.entries());
+    const showResult = Object.assign(objCurrentWeek, daysNews);
 
-    makeBluePipes(dayNews);
+    makeBluePipes(showResult);
 }
 
 function makeBluePipes(data) {
-    const pipe = document.querySelectorAll('.chart__pipe');
+    const countData = Object.values(data);
 
-    for(let i = 0; i < Object.values(data).length; i++) {
-        if (Object.values(data)[i] != 0) {
+    for(let i = 0; i < countData.length; i++) {
+        if (countData[i] !== 0) {
         
-            const pipeWidth = Object.values(data)[i];
-            pipe[i].style.width = `${pipeWidth}%`;
-            pipe[i].textContent = Object.values(data)[i];
-            pipe[i].style.background = '#2F71E5';
-
-        }   else {
-            pipe[i].style.width = 0;
-            pipe[i].textContent = 0;
-            pipe[i].style.color = 'black';
+            pipes[i].style.width = `${countData[i]}%`;
+            pipes[i].textContent = countData[i];
+            pipes[i].style.background = '#2F71E5';
+        } else {
+            pipes[i].style.width = 0;
+            pipes[i].textContent = 0;
+            pipes[i].style.color = 'black';
         }
     }
 }
