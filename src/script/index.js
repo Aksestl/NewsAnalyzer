@@ -64,8 +64,6 @@ function showResults(data) {
   new NewsList(cardContainer, data, newCard)._renderCards();
 }
 
-
-
 document.forms.form.addEventListener('submit', newsSearchHandler);
 document.querySelector('.button__search').addEventListener("click", newsSearchHandler);
 searchInput.addEventListener('input', handleValidate);
