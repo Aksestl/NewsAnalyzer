@@ -1,0 +1,28 @@
+.search__error{
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+
+    width: 60%;
+    height: 24px;
+    background: rgb(216, 56, 56);
+    border-radius: 100px;
+    border: none;
+    outline: none;
+
+    padding-left: 15px;
+    margin: 5px 0;
+}
+
+@media (max-width: 680px) {
+    .search__error {
+        width: 90%;
+        height: 20px;
+        font-size: 14px;
+        line-height: 18px;
+
+    }
+}

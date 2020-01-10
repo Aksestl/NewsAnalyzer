@@ -1,29 +1,17 @@
 .chart__pipe{
     margin-left: 45px;
     height: 24px;
-    background-color: #2F71E5;
-}
+    
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    padding: 5px;
 
-.chart__item:first-of-type .chart__pipe{
-    width: 15%;
-}
-.chart__item:nth-of-type(2) .chart__pipe{
-    width: 18%;
-}
-.chart__item:nth-of-type(3) .chart__pipe{
-    width: 11%;
-}
-.chart__item:nth-of-type(4) .chart__pipe{
-    width: 39%;
-}
-.chart__item:nth-of-type(5) .chart__pipe{
-    width: 45%;
-}
-.chart__item:nth-of-type(6) .chart__pipe{
-    width: 73%;
-}
-.chart__item:nth-of-type(7) .chart__pipe{
-    width: 34%;
 }
 
 @media (max-width: 600px) {

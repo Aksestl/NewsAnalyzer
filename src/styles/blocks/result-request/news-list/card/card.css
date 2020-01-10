@@ -6,3 +6,7 @@
     background-color: white;
     border-radius: 10px;
 }
+
+.card:hover{
+    box-shadow: 5px 10px 20px rgba(129, 178, 216, 0.8);
+  }

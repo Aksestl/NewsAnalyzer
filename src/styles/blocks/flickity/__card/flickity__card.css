@@ -4,6 +4,7 @@
 
 .flickity__card{
     width: 400px;
+    height: 288px;
     margin: 50px 10px;
 
     border-radius: 16px;
@@ -17,3 +18,8 @@
         margin: 20 10px;
     }
 }
+
+.flickity__card:hover{
+  box-shadow: 5px 10px 20px rgba(129, 178, 216, 0.8);
+}
+

@@ -1,6 +1,5 @@
 @import url(./__data/chart__data.css);
 @import url(./_day/chart__point_day.css);
-@import url(./_pipe/chart__point_pipe.css);
 
 .chart__point{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;

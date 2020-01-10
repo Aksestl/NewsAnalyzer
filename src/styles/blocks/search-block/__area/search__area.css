@@ -1,13 +1,16 @@
+@import url(./__error/search__error.css);
+@import url(./__error/_hidden/search__error_hidden.css);
 @import url(./__subtitle/search__subtitle.css);
 @import url(./__title/search__title.css);
 @import url(./__form/search__form.css);
 
 .search__area{
-    width: 40%;
-    margin: 70px auto 0;
+    width: 50%;
+    margin: 50px auto 0;
     
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 @media (max-width: 900px) {
