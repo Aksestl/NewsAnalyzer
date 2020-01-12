@@ -11,7 +11,7 @@ class Card {
         this._element = this._createCard();
     }
 
-    _createCard() {
+    _createCard(name, title, publishedAt, description, urlToImage, url) {
         const card = document.createElement('a');
         card.classList.add('card', 'pointer');
         card.href = this._url;
