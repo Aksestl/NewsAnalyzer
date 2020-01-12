@@ -17,11 +17,7 @@ class ApiGitHub {
               return result.json();
             }
             return Promise.reject(`Ошибка: ${result.status}`);
-        })
-            .then((result) => { 
-              console.log(result);
-              return result;
-            });
+        });
     }
 }
 
