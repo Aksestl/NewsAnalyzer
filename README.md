@@ -1,5 +1,5 @@
 # News Analyzer (by Aksenova Alena)
-* Сurrent version of the project is v0.0.2
+* Сurrent version of the project is v0.0.4
 * This is my diploma project and is created for skill development
 * This is a news search system with the ability to display query statistics:
     * index page - allows to search news for the last week, contains author's information,
