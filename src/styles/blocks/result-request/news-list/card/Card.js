@@ -25,7 +25,7 @@ class Card {
     _createImage() {
         const image = document.createElement('img');
         image.classList.add('card__image');
-        image.alt = 'Извините, данное изображение не доступно';
+        image.alt = 'Извините, не удалось загрузить фотографию';
         image.src = this._urlToImage;
         image.onerror = () => {
             image.src = 'http://pixel-one.ru/uploads/posts/2017-10/1508524003_grumpy-cat.jpg';

@@ -6,6 +6,7 @@ console.log(resultData);
 const keyWord = localStorage.getItem('word');
 const pipes = document.querySelectorAll('.chart__pipe');
 const week = 6;
+const weekAgo = 24*60*60*1000;
 
 // подставили значения шапки
 const searchWord = document.querySelector(".search-word");
@@ -32,9 +33,7 @@ function countWeekResults(word) {
 
 // проставляем текущий месяц на линии
 const date = new Date();
-const formatterMonth = new Intl.DateTimeFormat("ru", {
-  month: "long",
-});
+const formatterMonth = new Intl.DateTimeFormat("ru", {month: "long",});
 const currentMonth = document.querySelector(".current-month");
 currentMonth.textContent = formatterMonth.format(date);
 
@@ -46,8 +45,8 @@ function chartData() {
     let weekData = [];
 
     for (let i = week; i >= 0; i--) {
-        const day = new Date(new Date().getTime() - i*24*60*60*1000).toLocaleDateString('ru', { day: "numeric"});
-        const dayWeek = new Date(new Date().getTime() - i*24*60*60*1000).toLocaleDateString('ru', { weekday: "short"});
+        const day = new Date(new Date().getTime() - i*weekAgo).toLocaleDateString('ru', { day: "numeric"});
+        const dayWeek = new Date(new Date().getTime() - i*weekAgo).toLocaleDateString('ru', { weekday: "short"});
         const chartItemData = day + ', ' + dayWeek;
         weekData.push(chartItemData);
     }
@@ -81,7 +80,7 @@ function daysCount() {
     const data = new Date();
     const daysList = data.getDate();
     const currentWeek = new Map();
-    for (let i = 6; i >= 0; i--) {
+    for (let i = week; i >= 0; i--) {
         currentWeek.set(daysList - i, 0);
     }
     const objCurrentWeek = Object.fromEntries(currentWeek.entries());

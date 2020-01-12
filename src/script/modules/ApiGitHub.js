@@ -7,8 +7,8 @@ class ApiGitHub {
     // CARDS 
     getCommits() {
         return fetch(
-        `${this.baseUrl}` + `${this.owner}` + `${this.repo}` + 
-        'commits',  
+        `${this.baseUrl}` + `${this.owner}`+ '/' + `${this.repo}` + 
+        '/commits',  
       {
         method: 'GET'
       })
