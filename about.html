@@ -9,7 +9,7 @@
   <meta name="author" content="Aksenova Alena">
   <title>About</title>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./styles/styles.ca0fa5dd1aaab1f8eb23.css">
+  <link rel="stylesheet" href="./styles/about.84035ee588ca70290222.css">
   
 
 </head>
@@ -19,10 +19,12 @@
       <!-- HEADER -->
       <header class="header">
         <div class="header__title header__title_black">NewsAnalyzer</div>
-        <div class="header__menu">
-          <a class="header__menu-item header__menu-item_black pointer" href="./index.html">Главная</a>
-          <a class="header__menu-item header__menu-item_black header__menu-item_selected-black pointer" href="./about.html">О проекте</a>
-        </div>
+        <nav class="header__menu">
+          <ul class="nav">
+            <li class="nav__item"><a class="nav__link nav__link_black pointer" href="./index.html">Главная</a></li>
+            <li class="nav__item"><a class=" nav__link nav__link_black nav__link_selected-black pointer" href="./about.html">О проекте</a></li>
+          </ul>
+        </nav>
       </header>
 
       <!-- ИНФОРМАЦИЯ О ПРОЕКТЕ -->
@@ -86,32 +88,33 @@
 
       <!-- ИНФОРМАЦИЯ ОБ АВТОРЕ -->
       <section class="info info_author">
-      <picture>
-          <source srcset="./images/avatar-ipad.png" media="(max-width: 1200px)">
-          <source srcset="./images/avatar-se.png" media="(max-width: 475px)">
-          <img class="info__img" src="./images/avatar.png" alt="author's photo">
+        <picture>
+          <source srcset="./images/me_tiny.png" media="(max-width: 1000px)">
+          <img class="info__img" src="./images/me.png" alt="author's photo">
         </picture>
+
         <div class="info__about">
           <h3 class="info__title">Об авторе</h3>
           <article class="info__article">
             <p class="info__paragraph">
-              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
-              чем вы занимаетесь, какими технологиями разработки владеете.    
+              Меня зовут Аксенова Алена. В прошлом - юрист. В настоящем - начинающий фронтенд-разработчик.
+              Это мой дипломный проект.
             </p>
             <p class="info__paragraph">
-              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
-              и чем можете помочь потенциальным заказчикам.  
+              В нем использованы технологии: HTML, CSS, BEM, JavaScript, Git, Webpack. 
+              За время прохождения курса в Яндекс.Практикум сверстала простые одностраничные сайты, 
+              сделала адаптивную верстку, реализовала несколько проектов на JavaScript со сборками через Webpack. 
             </p>          
           </article>
-
         </div>
+
       </section>
   
       <!-- СЛАЙДЕР GIT КОММИТОВ -->
       <section class="commit-history">
         <div class="page__heading page__heading_about">
           <h2 class="page__title">История коммитов из GitHub</h2>
-          <a class="page__link page__link_git" href="https://github.com/Aksestl/NewsAnalyzer">Открыть в Github &#62;</a>
+          <a class="page__link page__link_git pointer" href="https://github.com/Aksestl/NewsAnalyzer">Открыть в Github &#62;</a>
         </div>
 
         <div class="flickity">
@@ -133,7 +136,7 @@
   
         <div class="footer__icons">
           <a href="https://github.com/Aksestl">
-            <img class="footer__icon pointer" src="./images/github.svg" alt="Github">
+            <img class="footer__icon pointer" src="./images/GH.svg" alt="Github">
           </a>
           <a href="https://facebook.com/">
             <img class="footer__icon pointer" src="./images/facebook.svg" alt="Facebook">
@@ -143,5 +146,5 @@
   
     </div>
   </body>
-<script type='module' src="./script/about.df1f71f3137c82079b45.js"></script>
+<script type='module' src="./script/about.fa2a30db413493c9e4e0.js"></script>
 </html>
