@@ -18,7 +18,7 @@
 
       <!-- HEADER -->
       <header class="header">
-        <div class="header__title">NewsAnalyzer</div>
+        <div class="header__title header__title_black">NewsAnalyzer</div>
         <nav class="header__menu">
           <ul class="nav">
             <li class="nav__item"><a class="nav__link nav__link_black pointer" href="./index.html">Главная</a></li>
@@ -88,25 +88,26 @@
 
       <!-- ИНФОРМАЦИЯ ОБ АВТОРЕ -->
       <section class="info info_author">
-      <picture>
-          <source srcset="<%=require('../images/avatar-ipad.png').default%>" media="(max-width: 1200px)">
-          <source srcset="<%=require('../images/avatar-se.png').default%>" media="(max-width: 475px)">
-          <img class="info__img" src="<%=require('../images/avatar.png').default%>" alt="author's photo">
+        <picture>
+          <source srcset="<%=require('../images/me_tiny.png').default%>" media="(max-width: 1000px)">
+          <img class="info__img" src="<%=require('../images/me.png').default%>" alt="author's photo">
         </picture>
+
         <div class="info__about">
           <h3 class="info__title">Об авторе</h3>
           <article class="info__article">
             <p class="info__paragraph">
-              Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, 
-              чем вы занимаетесь, какими технологиями разработки владеете.    
+              Меня зовут - Аксенова Алена. В прошлом - юрист. В настоящем - начинающий фронтенд-разработчик.
+              Это мой дипломный проект.
             </p>
             <p class="info__paragraph">
-              Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, 
-              и чем можете помочь потенциальным заказчикам.  
+              В нем использованы технологии: HTML, CSS, BEM, JavaScript, Git, Webpack. 
+              За время прохождения курса в Яндекс.Практикум сверстала простые одностраничные сайты, 
+              сделала адаптивную верстку, реализовала несколько проектов на JavaScript со сборками через Webpack. 
             </p>          
           </article>
-
         </div>
+
       </section>
   
       <!-- СЛАЙДЕР GIT КОММИТОВ -->
