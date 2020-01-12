@@ -2,8 +2,10 @@ import "../styles/statistics.css";
 
 // получили данные
 const resultData = JSON.parse(localStorage.getItem('apiRes'));
+console.log(resultData);
 const keyWord = localStorage.getItem('word');
 const pipes = document.querySelectorAll('.chart__pipe');
+const week = 6;
 
 // подставили значения шапки
 const searchWord = document.querySelector(".search-word");
@@ -22,7 +24,7 @@ function countWeekResults(word) {
 
     for (let i = 0; i < articles.length; i++) {
         if (articles[i].title.toLowerCase().includes(word.toLowerCase())){
-           titlesCount +=1;
+           titlesCount ++;
         }
     }
     return titlesCount;
@@ -43,7 +45,7 @@ chartData();
 function chartData() {
     let weekData = [];
 
-    for (let i = 6; i >= 0; i--) {
+    for (let i = week; i >= 0; i--) {
         const day = new Date(new Date().getTime() - i*24*60*60*1000).toLocaleDateString('ru', { day: "numeric"});
         const dayWeek = new Date(new Date().getTime() - i*24*60*60*1000).toLocaleDateString('ru', { weekday: "short"});
         const chartItemData = day + ', ' + dayWeek;

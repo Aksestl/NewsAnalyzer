@@ -1,29 +1,14 @@
+@import url(./_none/chart__scale_none.css);
 .chart__scale{
-    width: 92%;
+    width: 100%;
+    padding-left: 90px;
+    border-top: 3px solid #B6BCBF;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-self: flex-end;
 
     list-style: none;
-}
-
-@media (max-width: 1200px) {
-    .chart__scale {
-        width: 89%;
-    }
-}
-
-@media (max-width: 900px) {
-    .chart__scale {
-        width: 87%;
-    }
-}
-
-@media (max-width: 900px) {
-    .chart__scale {
-        width: 85%;
-    }
 }
 
 @media (max-width: 650px) {

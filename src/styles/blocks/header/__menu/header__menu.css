@@ -1,9 +1,4 @@
-@import url(./__menu-item/header__menu-item.css);
-
 .header__menu{
-    display: flex;
-    justify-content: space-between;
-
     padding-right: 104px;   
 }
 

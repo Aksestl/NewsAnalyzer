@@ -1,0 +1,5 @@
+.nav__link.nav__link_selected-black{
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 26px;
+}
