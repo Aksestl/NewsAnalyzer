@@ -19,3 +19,7 @@
         margin-bottom: 20px;
     }
 }
+
+.page__link:hover{
+    color:gray;
+}

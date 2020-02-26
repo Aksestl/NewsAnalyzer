@@ -10,7 +10,7 @@ class ApiCard {
     getCards(keyWord) {
         return fetch(
         `${this.baseUrl}` + `${keyWord}` + '&from=' + `${this.fromDATA}` + 
-        '&to=' + `${this.toDATA}` + '&pageSize=100&apiKey=' + `${this.apiKey}`,  
+        '&to=' + `${this.toDATA}` + 'sortBy=popularity&pageSize=100&apiKey=' + `${this.apiKey}`, 
       {
         method: 'GET'
       })
@@ -18,13 +18,8 @@ class ApiCard {
             if (result.ok) {
               return result.json();
             }
-            
             return Promise.reject(`Ошибка: ${result.status}`);
-        })
-            .then((result) => { 
-              console.log(result);
-              return result;
-            })
+        });
     }
 }
 

@@ -1,4 +1,5 @@
-.header__menu-item.header__menu-item_selected{
+.nav__link.nav__link_selected{
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 26px;
 }

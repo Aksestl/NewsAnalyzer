@@ -1,0 +1,10 @@
+@import url(./__item/nav__item.css);
+@import url(./__link/nav__link.css);
+
+.nav{
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+}

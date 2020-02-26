@@ -10,6 +10,10 @@
     padding: 40px;
 }
 
+.footer__link-item:hover{
+    font-weight: 650;
+}
+
 @media (max-width: 1200px) {
     .footer__link-item {
         padding: 20px;

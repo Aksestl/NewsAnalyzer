@@ -7,8 +7,8 @@ class ApiGitHub {
     // CARDS 
     getCommits() {
         return fetch(
-        `${this.baseUrl}` + `${this.owner}` + `${this.repo}` + 
-        'commits',  
+        `${this.baseUrl}` + `${this.owner}`+ '/' + `${this.repo}` + 
+        '/commits',  
       {
         method: 'GET'
       })
@@ -17,11 +17,7 @@ class ApiGitHub {
               return result.json();
             }
             return Promise.reject(`Ошибка: ${result.status}`);
-        })
-            .then((result) => { 
-              console.log(result);
-              return result;
-            });
+        });
     }
 }
 

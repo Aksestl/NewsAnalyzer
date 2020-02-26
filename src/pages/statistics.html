@@ -18,10 +18,12 @@
       <!-- HEADER -->
       <header class="header">
         <div class="header__title header__title_black">NewsAnalyzer</div>
-        <div class="header__menu">
-          <a class="header__menu-item header__menu-item_black pointer" href="./index.html">Главная</a>
-          <a class="header__menu-item header__menu-item_black pointer" href="./about.html">О проекте</a>
-        </div>
+        <nav class="header__menu">
+          <ul class="nav">
+            <li class="nav__item"><a class="nav__link nav__link_black nav__link_selected-black pointer" href="./index.html">Главная</a></li>
+            <li class="nav__item"><a class=" nav__link nav__link_black pointer" href="./about.html">О проекте</a></li>
+          </ul>
+        </nav>
       </header>
 
       <!-- ОБЩИЕ ДАННЫЕ ЗАПРОСА -->
@@ -96,7 +98,7 @@
             </div>
           </li>
 
-          <li class="chart__scale">
+          <li class="chart__scale chart__scale_none">
             <p class="chart__point">0</p>
             <p class="chart__point">25</p>
             <p class="chart__point">50</p>
@@ -121,7 +123,7 @@
   
         <div class="footer__icons">
           <a href="https://github.com/Aksestl">
-            <img class="footer__icon pointer" src="<%=require('../images/github.svg').default%>" alt="Github">
+            <img class="footer__icon pointer" src="<%=require('../images/GH.svg').default%>" alt="Github">
           </a>
           <a href="https://facebook.com/">
             <img class="footer__icon pointer" src="<%=require('../images/facebook.svg').default%>" alt="Facebook">

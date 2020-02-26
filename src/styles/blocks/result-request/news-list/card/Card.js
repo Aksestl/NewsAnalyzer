@@ -11,7 +11,7 @@ class Card {
         this._element = this._createCard();
     }
 
-    _createCard() {
+    _createCard(name, title, publishedAt, description, urlToImage, url) {
         const card = document.createElement('a');
         card.classList.add('card', 'pointer');
         card.href = this._url;
@@ -25,7 +25,7 @@ class Card {
     _createImage() {
         const image = document.createElement('img');
         image.classList.add('card__image');
-        image.alt = 'Извините, данное изображение не доступно';
+        image.alt = 'Извините, не удалось загрузить фотографию';
         image.src = this._urlToImage;
         image.onerror = () => {
             image.src = 'http://pixel-one.ru/uploads/posts/2017-10/1508524003_grumpy-cat.jpg';

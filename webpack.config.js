@@ -66,20 +66,23 @@ module.exports = {
         	new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/pages/index.html',
+            chunks: ['index'],
             filename: 'index.html'
         }),
 		new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/pages/about.html',
+            chunks: ['about'],
             filename: 'about.html'
         }),
 		new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/pages/statistics.html',
+            chunks: ['statistics'],
             filename: 'statistics.html'
         }),
         new MiniCssExtractPlugin({
-          filename: './styles/styles.[contenthash].css',
+          filename: './styles/[name].[contenthash].css',
     }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
